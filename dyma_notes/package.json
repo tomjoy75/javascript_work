@@ -1,0 +1,27 @@
+{
+  "name": "javascript_work",
+  "version": "1.0.0",
+  "description": "preparatory exercises to 42 project Transcendance",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomjoy75/javascript_work.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomjoy75/javascript_work/issues"
+  },
+  "homepage": "https://github.com/tomjoy75/javascript_work#readme",
+  "devDependencies": {
+    "vite": "^6.2.2"
+  }
+}
