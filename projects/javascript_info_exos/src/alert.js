@@ -143,29 +143,56 @@
 // else
 //     alert( 'We hope that this page looks ok!' );
 
-// Convert in Switch
-let a = +prompt('a?', '');
+// // Convert in Switch
+// let a = +prompt('a?', '');
 
-// if (a == 0) {
-//   alert( 0 );
-// }
-// if (a == 1) {
-//   alert( 1 );
+// // if (a == 0) {
+// //   alert( 0 );
+// // }
+// // if (a == 1) {
+// //   alert( 1 );
+// // }
+
+// // if (a == 2 || a == 3) {
+// //   alert( '2,3' );
+// // }
+
+// switch (a){
+// 	case 0:
+// 		alert (0);
+// 		break;
+// 	case 1:
+// 		alert (1);
+// 		break;
+// 	case 2:
+// 	case 3:
+// 		alert( '2,3');
+// 		break;
 // }
 
-// if (a == 2 || a == 3) {
-//   alert( '2,3' );
+// Functions
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Did parents allow you?');
+//   }
+// }
+// function checkAge(age) {
+// 	return ((age > 18) ? true : confirm('Did parents allow you?'));
+// }
+// function checkAge(age) {
+// 	return (age > 18 || confirm('Did parents allow you?'));
 // }
 
-switch (a){
-	case 0:
-		alert (0);
-		break;
-	case 1:
-		alert (1);
-		break;
-	case 2:
-	case 3:
-		alert( '2,3');
-		break;
+// function min(a, b){
+// 	return ((a < b) ? a : b);
+// }
+
+function pow(x, n){
+	return (x**n);
 }
+let num = +prompt("number?", 0);
+let exp = +prompt("exposant", 1);
+alert((exp > 0) ? pow(num, exp): `Power ${exp} is not supported`);
