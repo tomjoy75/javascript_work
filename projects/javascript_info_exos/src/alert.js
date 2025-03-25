@@ -42,17 +42,39 @@
 // if (!(age >= 14 && age <= 90)){};
 // if (age < 14 || age > 90)
 
-let login = prompt("Enter your login", "Admin");
-if (login == "Admin"){
-	let pass = prompt("Enter your password", "TheMaster");
-	if (pass == "TheMaster")
-		alert("Welcome!");
-	else if (!pass)
-		alert("Cancelled");
-	else
-		alert("Wrong password")
+// let login = prompt("Enter your login", "Admin");
+// if (login == "Admin"){
+// 	let pass = prompt("Enter your password", "TheMaster");
+// 	if (pass == "TheMaster")
+// 		alert("Welcome!");
+// 	else if (!pass)
+// 		alert("Cancelled");
+// 	else
+// 		alert("Wrong password")
+// }
+// else if (!login)
+// 	alert("Cancelled");
+// else
+// 	alert("I don't know you");
+
+// for (let i = 2; i <= 10; i += 2){alert(i);}
+
+// for (let i = 0; i < 3; i++) {
+//   alert( `number ${i}!` );
+// }
+// let i = -1;
+// while ( ++i < 3) {
+//   alert( `number ${i}!` );
+// }
+
+// let answer = 0;
+// do {
+// 	answer = +prompt("Input a number", 0);
+// } while (answer < 100 && answer);
+
+// Prime numbers
+let max = +prompt("enter a number", 1);
+let result = "";
+for (let i = 2; i < max; i++){
+	
 }
-else if (!login)
-	alert("Cancelled");
-else
-	alert("I don't know you");
