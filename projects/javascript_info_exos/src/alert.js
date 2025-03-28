@@ -190,9 +190,9 @@
 // 	return ((a < b) ? a : b);
 // }
 
-function pow(x, n){
-	return (x**n);
-}
-let num = +prompt("number?", 0);
-let exp = +prompt("exposant", 1);
-alert((exp > 0) ? pow(num, exp): `Power ${exp} is not supported`);
+// function pow(x, n){
+// 	return (x**n);
+// }
+// let num = +prompt("number?", 0);
+// let exp = +prompt("exposant", 1);
+// alert((exp > 0) ? pow(num, exp): `Power ${exp} is not supported`);
