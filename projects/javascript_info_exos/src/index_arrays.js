@@ -116,19 +116,31 @@
 
 // Extendable calculator
 function Calculator(){
+	this.methods = [{op:"+", fn:(a, b) => a + b}, {op:"-", fn:(a,b)=>a - b}];
 	this.calculate = function(str){
 		let operators = str.split(" ");
-		if (operators[1] === "+")
-			return +operators[0] + +operators[2];
-		else if (operators[1] === "-")
-			return +operators[0] - +operators[2];
-		else
-			alert("Wrong operator");
+		let method = this.methods.find(item => item.op == operators[1]);
+		// console.log(method.fn);
+		// console.log(operators[0] + " " + operators[2]);
+		return method.fn(+operators[0], +operators[2]);
+//		console.log(operator);
+		// if (operators[1] === "+")
+		// 	return +operators[0] + +operators[2];
+		// else if (operators[1] === "-")
+		// 	return +operators[0] - +operators[2];
+		// else
+		// 	alert("Wrong operator");
 	};
-	this.addMethod(name, func){
-
+	this.addMethod = function(name, func){
+		this.methods.push({op: name, fn: func});
+//		console.log(this.methods);
 	};
 }
 let calc = new Calculator;
-
 alert( calc.calculate("3 + 7") ); // 10
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
