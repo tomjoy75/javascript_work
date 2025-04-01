@@ -65,3 +65,44 @@
 // alert(getMaxSubSum([-2, -1, 1, 2]));
 // alert(getMaxSubSum([100, -9, 2, -3, 5]));
 // alert(getMaxSubSum([1, 2, 3]));
+
+// function camelize(str){
+// 	let strArray = str.split('-');
+// //	console.log(strArray);
+// 	if (strArray[0] == "")
+// 		strArray.shift();
+// 	strArray = strArray.map(word => word[0].toUpperCase() + word.substring(1));
+// 	return (strArray.join(''));
+// }
+// Better Solution
+// function camelize(str){
+// 	return str.split('-')
+// 	.map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice())
+// 	.join('');
+// }
+// alert camelize("background-color"));
+// alert(camelize("list-style-image"));
+// alert(camelize("-webkit-transition"));
+
+// function filterRange(arr, a, b){
+// 	return arr.filter(item => (item >= a && item <= b));
+// }
+// let arr = [5, 3, 8, 1];
+// let filtered = filterRange(arr, 1, 4);
+// alert( filtered ); // 3,1 (matching values)
+// alert( arr ); // 5,3,8,1 (not modified)
+
+// function filterRangeInPlace(arr, a, b){
+// //	arr = arr.filter(item => a <= item && b>=item)
+// 	arr.forEach((item, index, Array) => {(item < a || item > b)?Array.splice(index, 1):null}); 
+// }
+// let arr = [5, 3, 8, 1];
+// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+// alert( arr ); // [3, 1]
+
+// let arr = [5, 2, 1, -10, 8, 15];
+// //arr.sort(function(a, b){return b - a});
+// arr.sort((a , b)=> b - a);
+// alert( arr ); // 15, 8, 5, 2, 1, -10
+
+// Copy and sort array
