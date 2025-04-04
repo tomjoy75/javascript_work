@@ -175,15 +175,45 @@
 // alert(arr[1].name); // Mary
 // alert(arr[2].name); // Pete
 
-// Shuffle an array
-function shuffle(arr){
+// // Shuffle an array
+// function shuffle(arr){
 	
+// }
+// let arr = [1, 2, 3];
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+
+function groupById(arr){
+    let obj = {};
+    obj = arr.reduce((prev, current)=>{prev[current.id] = current; return prev}, {});
+    return obj; 
 }
-let arr = [1, 2, 3];
-console.log(arr);
-shuffle(arr);
-console.log(arr);
-shuffle(arr);
-console.log(arr);
-shuffle(arr);
-console.log(arr);
+let users = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+  
+  let usersById = groupById(users);
+  console.log(usersById);
+  
+  /*
+  // after the call we should have:
+  
+  usersById = {
+    john: {id: 'john', name: "John Smith", age: 20},
+    ann: {id: 'ann', name: "Ann Smith", age: 24},
+    pete: {id: 'pete', name: "Pete Peterson", age: 31},
+  }
+  */
+
+//   let obj1 = {user :{key:"1", content:"a"}};
+//   console.log(obj1);
+//   obj1["user2"] = {key:"2", content:"b"};
+//   console.log(obj1);
+
