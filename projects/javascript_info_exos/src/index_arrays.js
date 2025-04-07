@@ -175,15 +175,76 @@
 // alert(arr[1].name); // Mary
 // alert(arr[2].name); // Pete
 
-// Shuffle an array
-function shuffle(arr){
-	
+// // Shuffle an array
+// function swap(arr, a, b){
+// 	let tmp = arr[b];
+// 	arr[b] = arr[a];
+// 	arr[a] = tmp;
+// }
+// // Autre facon décrire le swap en JS [array[i], array[j]] = [array[j], array[i]]
+// function shuffle(arr){
+// 	for (let i = arr.length - 1; i > 0; i--){
+// 		swap(arr, Math.floor(Math.random() * (i + 1)) , i);
+// 	}	
+// }
+// let arr = [1, 2, 3, 4, 5, 6];
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+
+// function getAverageAge(users){
+// 	return sumF = users.reduce((prev, user) => prev + user.age, 0) / users.length;
+// }
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
+// let arr = [ john, pete, mary ];
+// alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+// function unique(arr) {
+// 	return arr.sort().filter((name, idx, tab)=> tab[idx + 1] != name);
+//   }
+//Solution
+// function unique(arr){
+// 	let result = [];
+// 	for (let item of arr){
+// 		if (!result.includes(item))
+// 			result.push(item);
+// 	}
+// 	return (result);
+// }
+//   let strings = ["Hare", "Krishna", "Hare", "Krishna",
+// 	"Krishna", "Krishna", "Hare", "Hare", ":-O"
+//   ];
+  
+//   alert( unique(strings) ); // Hare, Krishna, :-O
+
+function groupById(arr){
+	return arr.reduce((prev, item)=>{
+		({id: item.id, name: item });
+		return prev;
+	}
+	,{})
 }
-let arr = [1, 2, 3];
-console.log(arr);
-shuffle(arr);
-console.log(arr);
-shuffle(arr);
-console.log(arr);
-shuffle(arr);
-console.log(arr);
+let users = [
+	{id: 'john', name: "John Smith", age: 20},
+	{id: 'ann', name: "Ann Smith", age: 24},
+	{id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+  
+  let usersById = groupById(users);
+  console.log(usersById.john);
+  
+  /*
+  // after the call we should have:
+  
+  usersById = {
+	john: {id: 'john', name: "John Smith", age: 20},
+	ann: {id: 'ann', name: "Ann Smith", age: 24},
+	pete: {id: 'pete', name: "Pete Peterson", age: 31},
+  }
+  */
