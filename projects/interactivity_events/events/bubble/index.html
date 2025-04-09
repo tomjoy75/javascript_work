@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>    
+		<title>Propagation d'événements dans le DOM</title>    
+		<style type="text/css">        
+			div#container {            
+				padding:15px;            
+				border:1px solid #999;
+				}                    
+			div#container div {            
+				padding:5px;            
+				margin:5px;            
+				display:inline-block;            
+				border:1px solid #999;                    
+				font-size:20px;            
+				cursor: pointer;        
+			}     
+		</style>
+	</head>
+	<body>
+		<h1>Cliquez sur les 2 div et observez la propagation de l'événement</h1>
+		<div id="container">
+		<div id="click1">Cliquez sur div #1</div>
+		<div id="click2">Cliquez sur div #2</div>
+		</div>
+	</body>
+	<script type="text/javascript">        
+		var container=document.getElementById("container");        
+		var click1=document.getElementById("click1");        
+		var click2=document.getElementById("click2");        
+		document.body.addEventListener("click", function(evt) {console.log("Listener de body" + this.innerHTML)});        
+		container.addEventListener("click", function(evt) {console.log("Listener de container" + this.innerHTML)});        
+		click1.addEventListener("click", clickDiv1);        
+		click2.addEventListener("click", clickDiv2);                
+		function clickDiv1(e) {            
+			console.log("Click1 : bubbles="+e.bubbles+" cancelBubble="+e.cancelBubble);        
+		}        
+		function clickDiv2(e) {            
+			e.stopPropagation();            
+			console.log("Click2 : bubbles="+e.bubbles+" cancelBubble="+e.cancelBubble);        
+		}    
+	</script>
+</html>
