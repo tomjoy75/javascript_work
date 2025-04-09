@@ -23,15 +23,15 @@
 			function hideElement(e){
 				e.hidden = true;
 			}
-			document.getElementById("but1").onclick = ()=>{
-				let div = document.getElementById("text");
-		//		div.innerHTML = "";
-				if (!div.hidden)
-					div.hidden = true;
-				else
-					div.hidden = false;
-			};
-			document.getElementById("but2").onclick = hideElement(document.getElementById("but2"));
+		// 	document.getElementById("but1").onclick = ()=>{
+		// 		let div = document.getElementById("text");
+		// //		div.innerHTML = "";
+		// 		if (!div.hidden)
+		// 			div.hidden = true;
+		// 		else
+		// 			div.hidden = false;
+		// 	};
+			document.getElementById("but2").onclick = ()=>{hideElement(document.getElementById("but2"))};
 
 		</script>
 	</body>
