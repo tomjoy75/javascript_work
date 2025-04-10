@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<!-- <style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style> -->
+	</head>
+	<body>
+		<form id="form" class="p-4 bg-white shadow rounded space-y-4">
+			<label class="block text-sm font-bold">name:</label> 
+			<input type="text" name="name" class="border rounded w-full p-2">
+
+			<label class="block text-sm font-bold">age:</label> 
+			<input type="number" name="age" placeholder="42" class="border rounded w-full p-2">
+
+			<label class="block text-sm font-bold">avatar:</label> 
+			<input type="url" id="avatar" name="avatar" class="border rounded w-full p-2" placeholder="27951137-elegant-lunettes-gars-3d-avatar-personnage-des-illustrations.html">
+			
+			<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+		</form>
+		<div id="joueurs">
+			<!-- comment -->
+			<!-- <table>
+				<tr>
+					<td>cell 1</td>
+					<td>cell 2</td>
+				</tr>
+			</table> -->
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>

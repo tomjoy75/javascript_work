@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<!-- <input value="Click me 1" onclick="alert(`Click : ${this.innerHTML}`)"  type="button"/>
+		<input type="button" id="elem2" value="Click me 2"/>
+		<input type="button" id="elem3" value="Click me 3"/>
+		<script>
+			document.addEventListener("DOMContentLoaded", ()=>{alert("DOM built")});
+			elem2.onclick = ()=>{
+				alert(`Click : ${this.innerHTML}`);
+			};
+			elem3.addEventListener("click", (event)=>{alert(event.type + " at " + event.currentTarget);
+					alert("Coordinates: " + event.clientX + ":" + event.clientY);
+			}, "once")
+		</script> -->
+		<input value="Click to hide value" type="button" id="but1" name="but1"/>
+		<input value="Click to hide itself" type="button" id="but2" name="but2"/>
+		<div id="text">Text</div>
+		<script>
+			function hideElement(e){
+				e.hidden = true;
+			}
+		// 	document.getElementById("but1").onclick = ()=>{
+		// 		let div = document.getElementById("text");
+		// //		div.innerHTML = "";
+		// 		if (!div.hidden)
+		// 			div.hidden = true;
+		// 		else
+		// 			div.hidden = false;
+		// 	};
+			document.getElementById("but2").onclick = ()=>{hideElement(document.getElementById("but2"))};
+
+		</script>
+	</body>
+</html>
