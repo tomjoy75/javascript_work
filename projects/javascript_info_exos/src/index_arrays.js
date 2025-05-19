@@ -243,8 +243,14 @@ let users = [
   // after the call we should have:
   
   usersById = {
-	john: {id: 'john', name: "John Smith", age: 20},
-	ann: {id: 'ann', name: "Ann Smith", age: 24},
-	pete: {id: 'pete', name: "Pete Peterson", age: 31},
+    john: {id: 'john', name: "John Smith", age: 20},
+    ann: {id: 'ann', name: "Ann Smith", age: 24},
+    pete: {id: 'pete', name: "Pete Peterson", age: 31},
   }
   */
+
+//   let obj1 = {user :{key:"1", content:"a"}};
+//   console.log(obj1);
+//   obj1["user2"] = {key:"2", content:"b"};
+//   console.log(obj1);
+
